@@ -1,12 +1,50 @@
-# React + Vite
+# Hangman Mini Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A browser-based Hangman game built with React (via Vite) and a backend powered by Express and OpenAI's GPT. The game generates random 6-letter English nouns using OpenAI's GPT-3.5-turbo model.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Random 6-letter word generation using OpenAI
+- Hangman gameplay with keyboard input
+- Session-based game limit (3 per player)
+- IP restriction logic (can whitelist IPs)
+- Fun & challenging, powered by AI
+- Remembers attempts in sessionStorage, localStorage, and cookies
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend**: React, Vite
+- **Backend**: Node.js, Express
+- **AI**: OpenAI GPT-3.5-Turbo API
+- **Styling**: CSS Modules
+
+## Setup
+
+### 1. Clone the repo
+```bash
+git clone https://github.com/your-username/hangman-ai.git
+cd hangman-ai
+```
+
+### 2. Install dependencies
+```bash
+npm install
+```
+
+### 3. Setup environment variables
+Rename the .env_local file to .env:
+```bash
+mv .env_local .env
+```
+Then, open the .env file and populate it with your actual values.
+
+### 4. Run the app
+In one terminal, run the backend:
+```bash
+node server.js
+```
+In another terminal, start the frontend with Vite:
+```bash
+npm run dev
+
+```
