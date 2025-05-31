@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+.hangman {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    text-align: center;
+    background: #fefefe;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+}
+
+.hangman h1 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.word-display {
+    font-size: 2rem;
+    letter-spacing: 1rem;
+    margin-bottom: 2rem;
+    user-select: none;
+}
+
+.letter {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 50px;
+    margin: 0 5px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 3px solid #333;
+}
+
+.letter.filled {
+    transition: color 0.2s ease-in;
+    color: #222;
+}
+
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(35px, 1fr));
+    gap: 0.5rem;
+    justify-items: center;
+    margin-top: 1.5rem;
+}
+
+.keyboard button {
+    padding: 8px;
+    font-size: 1rem;
+    width: 100%;
+    border: none;
+    background: #eee;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.keyboard button:hover:not(:disabled) {
+    background: #007bff;
+    color: #fff;
+}
+
+.keyboard button:disabled {
+    background: #ccc;
+    color: #666;
+    cursor: not-allowed;
+}
+
+.status-message {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+.status-message.win {
+    color: green;
+}
+
+.status-message.lose {
+    color: crimson;
+}
+
+.hangman-figure .part {
+    stroke: black;
+    stroke-width: 4;
+    display: none;
+}
+
+.hangman-figure .part.visible {
+    display: block;
+}
+
+.hangman-figure .beam {
+    stroke: #444;
+    stroke-width: 4;
+}
+
+.hangman-figure .eye {
+    stroke: red;
+    stroke-width: 2;
+}
+
+.reset-button {
+    margin-top: 1.5rem;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.reset-button:hover {
+    background: #0056b3;
+}
