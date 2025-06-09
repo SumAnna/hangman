@@ -22,7 +22,7 @@ A browser-based Hangman game built with React (via Vite) and a backend powered b
 
 ### 1. Clone the repo
 ```bash
-git clone https://github.com/your-username/hangman-ai.git
+git clone https://github.com/your-username/hangman.git
 cd hangman-ai
 ```
 
