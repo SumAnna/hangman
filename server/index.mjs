@@ -1,9 +1,10 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import OpenAI from 'openai';
 
 dotenv.config();
+
+import OpenAI from 'openai';
 
 const app = express();
 app.use(cors());
